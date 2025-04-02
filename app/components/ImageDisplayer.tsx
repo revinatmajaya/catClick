@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect} from 'react'
+import Image from 'next/image'
 
 function randomInt(min:number, max:number){
     return Math.floor(Math.random()*(max-min+1)+min)
@@ -7,10 +8,10 @@ function randomInt(min:number, max:number){
 
 const ImageDisplayer = ({onClick}: any) => {
     const images = [
-        "./1.gif", "./2.png", "./3.gif", "./4.gif", "./5.gif",
-        "./6.gif", "./7.gif", "./8.gif", "./9.gif", "./10.gif",
-        "./11.gif","./12.gif","./13.gif","./14.gif","./15.gif",
-        "./16.gif","./17.gif","./18.gif","./19.gif","./20.gif",]
+        "/1.gif", "/2.png", "/3.gif", "/4.gif", "/5.gif",
+        "/6.gif", "/7.gif", "/8.gif", "/9.gif", "/10.gif",
+        "/11.gif","/12.gif","/13.gif","/14.gif","/15.gif",
+        "/16.gif","/17.gif","/18.gif","/19.gif","/20.gif",]
 
     const [randomPos, setRandomPos] = useState({
         bottom: "0",
@@ -49,7 +50,7 @@ const ImageDisplayer = ({onClick}: any) => {
                     onClick()
                 }}
             >
-                {image == "" ? "" : <img src={image} alt="cat" width={1000} height={1000} draggable={false}/>}
+                {image == "" ? "" : <Image src={image} alt="cat" width={1000} height={1000} draggable={false} unoptimized priority/>}
             </div>
         </div>
     )
