@@ -8,7 +8,9 @@ function randomInt(min:number, max:number){
 const ImageDisplayer = ({onClick}: any) => {
     const images = [
         "./1.gif", "./2.png", "./3.gif", "./4.gif", "./5.gif",
-        "./6.gif", "./7.gif", "./8.gif", "./9.gif", "./10.gif",]
+        "./6.gif", "./7.gif", "./8.gif", "./9.gif", "./10.gif",
+        "./11.gif","./12.gif","./13.gif","./14.gif","./15.gif",
+        "./16.gif","./17.gif","./18.gif","./19.gif","./20.gif",]
 
     const [randomPos, setRandomPos] = useState({
         bottom: "0",
